@@ -1,0 +1,14 @@
+.why {
+    margin-top: 100px;
+  }
+  
+.why .card-why {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #D0D0D0;
+    padding: 18px;
+    gap: 16px;
+    margin: 5px 0;
+  }
+  

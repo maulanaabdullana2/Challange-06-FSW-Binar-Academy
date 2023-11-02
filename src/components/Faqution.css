@@ -1,0 +1,21 @@
+.faq {
+    margin-top: 100px;
+  }
+  
+  .faq .title-faq {
+    text-align: left;
+  }
+
+  
+  @media (max-width: 992px) {
+    .faq .title-faq {
+      text-align: center;
+    }
+    .faq .title-faq h2 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .faq .title-faq p {
+      margin: 30px 0;
+    }
+  }
