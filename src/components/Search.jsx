@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Oval } from "react-loader-spinner";
 import "./Search.css";
 import { useCar } from "../store/CartContext";
-
 const Search = () => {
   const { state, dispatch } = useCar();
+  const [loading, setLoading] = useState(false);
 
   const HandleTipeDriver = (e) => {
     dispatch({
@@ -35,7 +36,11 @@ const Search = () => {
   };
 
   const handleFilter = () => {
-    dispatch({ type: "FILTER_CARS" });
+    setLoading(true);
+    setTimeout(() => {
+      dispatch({ type: "FILTER_CARS" });
+      setLoading(false);
+    }, 2000);
   };
 
   return (
@@ -43,6 +48,11 @@ const Search = () => {
       <Container>
         <Row>
           <Col lg={12} col={12}>
+            {loading && (
+              <div className="loading-spinner">
+                <Oval type="Oval" color="#007bff" height={50} width={50} />
+              </div>
+            )}
             <Row className="search__card mx-lg-5 py-3 px-4">
               <Col lg="auto" xl={2} xxl={3} md="auto">
                 <Form.Label>Tipe Driver</Form.Label>
