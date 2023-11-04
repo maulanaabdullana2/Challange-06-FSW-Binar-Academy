@@ -1,7 +1,7 @@
 ### Clone the repository:
 
 ```shell
-git clone https://github.com/maulanaabdullana2/Challange-04-FSW-Binar-Academy.git
+git clone https://github.com/maulanaabdullana2/Challange-06-FSW-Binar-Academy.git
 cd Challange-06-FSW-Binar-Academy
 
 ```
